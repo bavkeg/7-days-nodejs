@@ -185,7 +185,7 @@ NodeJS最大的卖点——事件机制和异步IO，对开发者并不是透明
 	    at null._onTimeout (/home/user/test.js:4:13)
 	    at Timer.listOnTimeout [as ontimeout] (timers.js:110:15)
 
-因为代码执行路径被打断了，我们就需要在异常冒泡到断点之前用`try`语句把异常捕获住，并通过回调函数传递被捕获的异常。于是我们可以像下边这样改造上边的例子。
+因为代码执行路径被打断了，我们就**需要在异常冒泡到断点之前用`try`语句把异常捕获住，并通过回调函数传递被捕获的异常**。于是我们可以像下边这样改造上边的例子。
 
 	function async(fn, callback) {
 		// Code execution path breaks here.
